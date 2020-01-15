@@ -1,0 +1,22 @@
+{
+  "name": "active",
+  "version": "1.0.0",
+  "description": "An app that keep you active",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/style.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eihsan94/active.git"
+  },
+  "author": "Ihsan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eihsan94/active/issues"
+  },
+  "homepage": "https://github.com/eihsan94/active#readme",
+  "devDependencies": {
+    "node-sass": "^4.13.0"
+  }
+}

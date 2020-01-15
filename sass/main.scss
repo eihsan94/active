@@ -1,0 +1,25 @@
+// import partials file
+// abstracts dir
+@import "abstracts/variables";
+@import "abstracts/functions";
+@import "abstracts/mixins";
+
+// base dir
+@import "base/base";
+@import "base/typography";
+@import "base/utilities";
+@import "base/animations";
+
+// pages dir
+@import "pages/home";
+// layout
+@import "layout/header";
+@import "layout/grid";
+
+// button component
+@import "components/button";
+
+
+
+
+
