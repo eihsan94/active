@@ -1,0 +1,7 @@
+@mixin clearfix { // to insert the original height of element that use float as float remove the height of the element
+    &:after { // the end part of the element
+        content: ""; // if we dont do this the after element will not appear in the page
+        display: table; // the standard version of clearfix
+        clear: both; // both float left and write
+    }
+} 
