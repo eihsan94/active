@@ -16,23 +16,23 @@ body {
     margin-bottom: 60px;
     &--main { // & = .heading-primary
         display: block;
-        font-size: 60px;
+        font-size: 50px;
         font-weight: 500;
-        letter-spacing: 55px;
-        margin-left: 5rem;
+        margin-left: 33px;
+        letter-spacing: $heading-primary-letter-space;
         /*
         animation-name: moveInLeft;
          animation-timing-function: ease-out; animation will start fast end slow
          animation-timing-function: ease-in; /* animation will start slow end fast
          animation-duration: 1s;
          */
-        animation: moveInLeft 1s ease-out;      
+        animation: moveInLeft 1s ease-out;
     }
     &--sub {
         display: block;
-        font-size: 20px;
+        font-size: 16px;
         font-weight: 700;
-        letter-spacing: 10px;
+        letter-spacing: 7px;
         /* 
         can be written as oneline below
         animation-name: moveInRight;
@@ -43,7 +43,7 @@ body {
 }
 
 .heading-secondary {
-    font-size: 3.5rem;
+    font-size: 3rem;
     text-transform: uppercase;
     font-weight: 700;
     background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
