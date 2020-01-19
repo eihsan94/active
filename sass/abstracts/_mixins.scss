@@ -4,4 +4,14 @@
         display: table; // the standard version of clearfix
         clear: both; // both float left and write
     }
-} 
+}
+
+@mixin card {
+    border-radius: 2rem;
+    box-shadow: 0 1.5rem 4rem rgba($color: $color-black, $alpha: .4);
+}
+@mixin tall-card {
+    border-radius: 2rem;
+    height: 50rem;
+    box-shadow: 0 1.5rem 4rem rgba($color: $color-black, $alpha: .4);
+}

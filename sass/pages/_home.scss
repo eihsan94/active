@@ -1,5 +1,35 @@
 .section-about {
     background-color: $color-grey-light-1;
-    padding: 15rem 0;
+    padding: 25rem 0;
     margin-top: -15vh;
+}
+
+.section-features {
+    padding: 20rem 0;
+    background-image: 
+         linear-gradient(
+              to right bottom,
+              rgba($color-primary, 0.8),
+              rgba($color-secondary, 0.8),
+         ),
+         url(../../assets/img/hero-img-2.jpg);     
+    background-size: cover;
+    background-position: center;
+    transform: skewY(4deg);
+    margin-top: -4rem;
+
+    & > * {
+        transform: skewY(-4deg);
+    }
+}
+
+.section-tours {
+    background-color: $color-grey-light-1;
+    padding: 30rem 0 30rem 0;
+    margin-top: -10rem;
+}
+
+.section-stories {
+    background-color: $color-grey-light-1;
+    padding: 15rem 0;
 }

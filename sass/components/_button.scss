@@ -11,7 +11,7 @@
     }
     &:hover {
         transform: translateY(-3px);
-        box-shadow: 0 10px 20px rgba($color-black, 0.2); /* box shadow: x-axis y-axis blur color */
+        box-shadow: $btn-hover-box-shadow;
         &::after { // & = .btn:hover::after
             transform: scaleX(1.4) scaleY(1.6);
             opacity: 0;
@@ -19,11 +19,18 @@
     }
     &:active {
         transform: translateY(-1px);
-        box-shadow: 0 5px 1px rgba($color-black, 0.2);
+        box-shadow: $btn-active-box-shadow;
     }
     &--white {
         background-color: $color-white;
         color: $color-grey-dark;
+        &:after { // & = btn--white
+            background-color: $color-white;
+        }
+    }
+    &--primary {
+        background-color: $color-primary;
+        color: $color-white;
         &:after { // & = btn--white
             background-color: $color-white;
         }
@@ -67,11 +74,14 @@
     &:hover {
         background-color: $color-primary;
         color: $color-white;
-        box-shadow: 0 1rem 2rem rgba($color: $color-black, $alpha: .15);
+        box-shadow: $btn-hover-box-shadow;
         transform: translateY(-2px);
+        border-radius: 2rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
     }
     &:active {
-        box-shadow: 0 .5rem 2rem rgba($color: $color-black, $alpha: .15);
+        box-shadow: $btn-active-box-shadow;
         transform: translateY(0);
     }
 }

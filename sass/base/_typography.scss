@@ -16,7 +16,7 @@ body {
     margin-bottom: 60px;
     &--main { // & = .heading-primary
         display: block;
-        font-size: 50px;
+        font-size: 250%;
         font-weight: 500;
         margin-left: 33px;
         letter-spacing: $heading-primary-letter-space;
@@ -30,7 +30,7 @@ body {
     }
     &--sub {
         display: block;
-        font-size: 16px;
+        font-size: 74%;
         font-weight: 700;
         letter-spacing: 7px;
         /* 
