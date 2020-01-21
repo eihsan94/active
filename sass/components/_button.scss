@@ -1,13 +1,18 @@
 .btn {
+    &,
     &:link,
     &:visited {
         text-transform: uppercase;
         text-decoration: none;
-        padding: 5px 20px;
+        padding: 1.5rem 4rem;
         display: inline-block;
         border-radius: 100px;
         transition: all 0.2s; /* for smooth floating button effects*/
         position: relative;
+
+        // <button> styles
+        border: none;
+        cursor: pointer;
     }
     &:hover {
         transform: translateY(-3px);
@@ -17,7 +22,9 @@
             opacity: 0;
         }
     }
-    &:active {
+    &:active, 
+    &:focus {
+        outline: none;
         transform: translateY(-1px);
         box-shadow: $btn-active-box-shadow;
     }
