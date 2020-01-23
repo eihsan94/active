@@ -1,5 +1,8 @@
-@mixin clearfix { // to insert the original height of element that use float as float remove the height of the element
-    &:after { // the end part of the element
+@mixin clearfix {
+
+    // to insert the original height of element that use float as float remove the height of the element
+    &:after {
+        // the end part of the element
         content: ""; // if we dont do this the after element will not appear in the page
         display: table; // the standard version of clearfix
         clear: both; // both float left and write
@@ -10,8 +13,16 @@
     border-radius: 2rem;
     box-shadow: 0 1.5rem 4rem rgba($color: $color-black, $alpha: .4);
 }
+
 @mixin tall-card {
     border-radius: 2rem;
     height: 50rem;
     box-shadow: 0 1.5rem 4rem rgba($color: $color-black, $alpha: .4);
+}
+
+@mixin absolute-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }

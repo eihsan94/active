@@ -8,6 +8,8 @@
     ),
     url(../../assets/img/act-7.jpg);
     background-size: 100%;
+    background-size: cover;
+    background-position: top;
     @include tall-card;
     display: flex;
     justify-content: flex-end;

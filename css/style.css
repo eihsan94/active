@@ -146,21 +146,132 @@ body {
 
 .section-tours {
   background-color: #f7f7f7;
-  padding: 30rem 0 30rem 0;
+  padding: 30rem 0 10rem 0;
   margin-top: -10rem; }
 
 .section-stories {
   position: relative;
-  padding: 10rem 0; }
+  padding: 10rem 0;
+  background-image: linear-gradient(to right bottom, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url(../assets/img/hero-img-1.jpg);
+  background-size: cover;
+  background-position: center; }
 
 .section-book {
-  padding: 15rem 0;
-  background-image: linear-gradient(to right bottom, #f55b83, #ac0b35); }
+  padding: 35rem 0;
+  background-image: linear-gradient(to right bottom, #fff, #ac0b35); }
+
+.menu__checkbox {
+  display: none; }
+
+.menu__button {
+  background-color: #4f98ca;
+  height: 7rem;
+  width: 7rem;
+  position: fixed;
+  top: 5rem;
+  left: 6.5rem;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+  z-index: 2000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer; }
+
+.menu__background {
+  height: 7rem;
+  width: 7rem;
+  border-radius: 50%;
+  position: fixed;
+  top: 5rem;
+  left: 6.5rem;
+  background-image: linear-gradient(to right bottom, #f55b83, #ac0b35);
+  z-index: 999;
+  transition: transform 0.5s cubic-bezier(0.86, 0, 0.07, 1); }
+
+.menu__nav {
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1001;
+  text-align: center;
+  opacity: 0;
+  width: 0;
+  transition: all 0.5s cubic-bezier(0.86, 0, 0.07, 1); }
+
+.menu__list {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  list-style: none;
+  width: 100%; }
+
+.menu__item {
+  margin: 1rem; }
+
+.menu__link {
+  display: inline-block; }
+  .menu__link:link, .menu__link:visited {
+    font-size: 3rem;
+    font-weight: 300;
+    padding: 1rem 2rem;
+    color: #fff;
+    text-decoration: none;
+    background-image: linear-gradient(120deg, transparent 0%, transparent 50%, #fff 50%);
+    transition: all .3s;
+    background-size: 300%; }
+  .menu__link:active, .menu__link:hover {
+    color: #f0134d;
+    background-position: 100%;
+    transform: translateX(1rem); }
+
+.menu__icon {
+  position: relative; }
+  .menu__icon, .menu__icon::before, .menu__icon::after {
+    width: 3rem;
+    height: 2px;
+    background-color: #fff;
+    display: inline-block; }
+  .menu__icon::before, .menu__icon::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    transition: all .2s; }
+  .menu__icon::before {
+    top: .8rem; }
+  .menu__icon::after {
+    bottom: .8rem; }
+
+.menu__button:hover .menu__icon::before {
+  transform: translateY(0.2rem); }
+
+.menu__button:hover .menu__icon::after {
+  transform: translateY(-0.2rem); }
+
+.menu__checkbox:checked ~ .menu__background {
+  transform: scale(50); }
+
+.menu__checkbox:checked ~ .menu__nav {
+  opacity: 1;
+  width: 100%; }
+
+.menu__checkbox:checked + .menu__button .menu__icon {
+  background-color: transparent; }
+
+.menu__checkbox:checked + .menu__button .menu__icon::before {
+  top: 0;
+  transform: rotate(45deg); }
+
+.menu__checkbox:checked + .menu__button .menu__icon::after {
+  top: 0;
+  transform: rotate(-45deg); }
 
 .header {
   position: relative;
   height: 95vh;
-  background-image: linear-gradient(to right bottom, rgba(240, 19, 77, 0.8), rgba(79, 152, 202, 0.8)), url(../assets/img/hero-img-1.jpg);
+  background-image: linear-gradient(to right bottom, rgba(240, 19, 77, 0.8), rgba(79, 152, 202, 0.8));
   background-size: cover;
   background-position: center;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80vh);
@@ -170,7 +281,7 @@ body {
   .header__logo-box {
     position: absolute;
     top: 40px;
-    left: 40px; }
+    right: 40px; }
   .header__logo {
     height: 35px; }
   .header__text-box {
@@ -211,6 +322,39 @@ body {
     width: calc( ((100% - 3 * 6rem) / 4) * 2 +  6rem); }
   .row .col-3-of-4 {
     width: calc( ((100% - 3 * 6rem) / 4) * 3 +  2 * 6rem); }
+
+.footer {
+  background-color: #333;
+  padding: 10rem 0;
+  font-size: 1.4rem; }
+  .footer__logo--box {
+    text-align: center;
+    margin-bottom: 8rem; }
+  .footer__logo--img {
+    width: 15rem;
+    height: auto; }
+  .footer__copyright {
+    text-align: right; }
+  .footer__menu, .footer__copyright {
+    display: inline-block;
+    border-top: 1px solid #f7f7f7;
+    padding-top: 2rem;
+    padding-left: 1rem;
+    width: 100%; }
+  .footer__list {
+    list-style: none;
+    display: flex; }
+  .footer__item:not(:last-child) {
+    margin-right: 1.5rem; }
+  .footer__link:link, .footer__link:visited {
+    color: #f7f7f7;
+    text-decoration: none;
+    display: inline-block;
+    text-transform: uppercase;
+    transition: all .3s; }
+  .footer__link:hover, .footer__link:active {
+    color: #f0134d;
+    transform: scale(1.1); }
 
 .btn, .btn:link, .btn:visited {
   text-transform: uppercase;
@@ -465,6 +609,7 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
+    transform: translate(-50%, -50%);
     transform: translate(-50%, 20%);
     color: #fff;
     text-transform: uppercase;
@@ -495,6 +640,8 @@ body {
 .book {
   background-image: linear-gradient(255deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.8) 52%, transparent 50%), url(../../assets/img/act-7.jpg);
   background-size: 100%;
+  background-size: cover;
+  background-position: top;
   border-radius: 2rem;
   height: 50rem;
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);

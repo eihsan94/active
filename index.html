@@ -13,8 +13,37 @@
 
 <body>
 
+    <!-- MENU BUTTON -->
+    <div class="menu">
+        <input type="checkbox" class="menu__checkbox" id="menu-toggle">
+        
+        <label for="menu-toggle" class="menu__button">
+            <span class="menu__icon">&nbsp;</span>
+        </label>
+
+        <div class="menu__background">&nbsp;</div>
+
+        <nav class="menu__nav">
+            <ul class="menu__list">
+                <li class="menu__item"><a href="#" class="menu__link">01 Intro</a></li>
+                <li class="menu__item"><a href="#" class="menu__link">02 Why choose us</a></li>
+                <li class="menu__item"><a href="#" class="menu__link">03 Hot events</a></li>
+                <li class="menu__item"><a href="#" class="menu__link">04 User Feedback</a></li>
+                <li class="menu__item"><a href="#" class="menu__link">05 Join Now</a></li>
+            </ul>
+        </nav>
+    </div>
+
+
     <!-- HERO HEADER -->
     <header class="header">
+        <div class="bg-video">
+            <video class="bg-video__content" autoplay muted loop>
+                <source src="assets/video/act-vid-1.mp4" type="video/mp4">
+                <source src="assets/video/act-vid-1.webm" type="video/mp4">
+                Your browser is not supported!
+            </video>
+        </div>
         <div class="header__logo-box">
             <img src="./assets/img/logo.png" alt="logo" class="header__logo">
         </div>
@@ -136,7 +165,7 @@
                                 <ul>
                                     <li>3 day events</li>
                                     <li>Up to 30 people</li>
-                                    <li>Sleep in  tents</li>
+                                    <li>Sleep in tents</li>
                                     <li>Monthly hosted</li>
                                     <li>Difficulty: easy</li>
                                 </ul>
@@ -239,13 +268,6 @@
 
         <!-- SECTION STORIES -->
         <section class="section-stories">
-            <div class="bg-video">
-                <video class="bg-video__content" autoplay muted loop>
-                    <source src="assets/video/act-vid-1.mp4" type="video/mp4">
-                    <source src="assets/video/act-vid-1.webm" type="video/mp4">
-                        Your browser is not supported!
-                </video>
-            </div>
             <div class="u-center-text u-margin-bottom-big">
                 <h2 class="heading-secondary">
                     We make people genuinely active
@@ -264,7 +286,8 @@
                             I had the best week ever with my family
                         </h3>
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet,
+                            consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                         </p>
                     </div>
                 </div>
@@ -282,7 +305,8 @@
                             My life is completely different now
                         </h3>
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet,
+                            consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                         </p>
                     </div>
                 </div>
@@ -339,8 +363,41 @@
             </div>
         </section>
 
-
     </main>
+
+    <footer class="footer">
+        <div class="footer__logo--box">
+            <img src="./assets/img/logo.png" alt="logo" class="footer__logo--img">
+        </div>
+        <div class="row">
+            <div class="col-1-of-2">
+                <div class="footer__menu">
+                    <ul class="footer__list">
+                        <li class="footer__item">
+                            <a href="#" class="footer__link">Company</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#" class="footer__link">Contact us</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#" class="footer__link">Careers</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#" class="footer__link">Privacy policy</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#" class="footer__link">Terms</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-1-of-2">
+                <p class="footer__copyright">
+                    <a href="#" class="footer__link">Active Corp &copy;</a> all right reserved. This site was made by <a href="https://master.d3phb5yfhxhh0o.amplifyapp.com/" class="footer__link"> Engku Ihsan</a>.
+                </p>
+            </div>
+        </div>
+    </footer>
 </body>
 
 </html>
