@@ -215,13 +215,14 @@ body {
 .btn, .btn:link, .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
-  padding: 1.5rem 4rem;
+  padding: 1rem 20px;
   display: inline-block;
   border-radius: 100px;
   transition: all 0.2s;
   /* for smooth floating button effects*/
   position: relative;
   border: none;
+  outline: none;
   cursor: pointer; }
 
 .btn:hover {
@@ -231,8 +232,7 @@ body {
     transform: scaleX(1.4) scaleY(1.6);
     opacity: 0; }
 
-.btn:active, .btn:focus {
-  outline: none;
+.btn:active {
   transform: translateY(-1px);
   box-shadow: 0 5px 1px rgba(0, 0, 0, 0.2); }
 
@@ -284,14 +284,12 @@ body {
   background-color: #f0134d;
   color: #fff;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-  transform: translateY(-2px);
   border-radius: 2rem;
-  padding-left: 1rem;
-  padding-right: 1rem; }
+  padding-left: 1.5rem;
+  padding-right: 1.5rem; }
 
 .btn-text:active {
-  box-shadow: 0 5px 1px rgba(0, 0, 0, 0.2);
-  transform: translateY(0); }
+  box-shadow: 0 5px 1px rgba(0, 0, 0, 0.2); }
 
 .composition {
   position: relative; }

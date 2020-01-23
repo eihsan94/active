@@ -4,14 +4,14 @@
     &:visited {
         text-transform: uppercase;
         text-decoration: none;
-        padding: 1.5rem 4rem;
+        padding: 1rem 20px;
         display: inline-block;
         border-radius: 100px;
         transition: all 0.2s; /* for smooth floating button effects*/
         position: relative;
 
-        // <button> styles
         border: none;
+        outline: none;
         cursor: pointer;
     }
     &:hover {
@@ -22,9 +22,7 @@
             opacity: 0;
         }
     }
-    &:active, 
-    &:focus {
-        outline: none;
+    &:active {
         transform: translateY(-1px);
         box-shadow: $btn-active-box-shadow;
     }
@@ -82,13 +80,11 @@
         background-color: $color-primary;
         color: $color-white;
         box-shadow: $btn-hover-box-shadow;
-        transform: translateY(-2px);
         border-radius: 2rem;
-        padding-left: 1rem;
-        padding-right: 1rem;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
     }
     &:active {
         box-shadow: $btn-active-box-shadow;
-        transform: translateY(0);
     }
 }
