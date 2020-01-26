@@ -5,6 +5,9 @@
     text-align: center;
     @include card; // card styles
     transition: transform .3s;
+    @include respond(tab-port) {
+        padding: 2rem;
+    }
     &__icon {
         font-size: 6rem;
         margin-bottom: .5rem;
@@ -13,6 +16,9 @@
         background-clip: text;
         -webkit-background-clip: text;
         color: transparent;
+        @include respond(tab-port) {
+            margin-bottom: 0;
+        }
     }
     &:hover {
         transform: translateY(-1.5rem) scale(1.03);

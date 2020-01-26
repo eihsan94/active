@@ -4,8 +4,14 @@
     
     &:not(:last-child) { // everyrow except the last row
         margin-bottom: $gutter-vertical;
+        @include respond(tab-port) {
+            margin-bottom: $gutter-vertical-small;
+        }
     }
-
+    @include respond(tab-port) {
+        max-width: 50rem;
+        padding: 0 3rem;
+    }
     @include clearfix; // refer the mixin file
 
     // ATTRIBUTE SELECTOR -> kinda like mixin but lighter
@@ -19,6 +25,13 @@
 
         &:not(:last-child) { // every item in row except the last item
             margin-right: $gutter-horizontal;
+            @include respond(tab-port) {
+                margin-right: 0;
+                margin-bottom: $gutter-vertical-small;
+            }
+        }
+        @include respond(tab-port) {
+            width: 100% !important;
         }
     }
     .col-1-of-2 {

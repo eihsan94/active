@@ -1,32 +1,52 @@
 .header {
     position: relative;
     height: 95vh;
-    background-image: 
-         linear-gradient(
-              to right bottom,
-              rgba($color-primary, 0.8),
-              rgba($color-secondary, 0.8),
-         );
-        //  ),
-        //  url(../assets/img/hero-img-1.jpg);
+    background-image:
+        linear-gradient(to right bottom,
+            rgba($color-primary, 0.8),
+            rgba($color-secondary, 0.8),
+        );
+    //  ),
+    //  url(../assets/img/hero-img-1.jpg);
     background-size: cover;
     background-position: center;
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80vh); /* the trapezium shape of the image */
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80vh); /* the trapezium shape of the image */
-    &__logo-box { // & = .header
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80vh);
+    /* the trapezium shape of the image */
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80vh);
+    /* the trapezium shape of the image */
+
+    @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em),
+    only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em),
+    only screen and (min-width: 125em) {
+        background-image: linear-gradient(to right bottom,
+                rgba($color-primary-light, 0.8),
+                rgba($color-secondary, 0.8)),
+            url(../img/hero.jpg);
+    }
+
+    @include respond(phone) {
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+    }
+
+    &__logo-box {
+        // & = .header
         position: absolute;
         top: 40px;
         right: 40px;
     }
+
     &__logo {
         height: 35px;
     }
+
     &__text-box {
         position: absolute;
         top: 40%;
         left: 50%;
-        transform: translate(-50%, -50%); /* making sure to align to the center of the box element */
+        transform: translate(-50%, -50%);
+        /* making sure to align to the center of the box element */
         text-align: center;
-    
+
     }
 }

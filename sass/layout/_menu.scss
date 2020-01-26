@@ -7,9 +7,6 @@
         background-color: $color-secondary;
         height: 7rem;
         width: 7rem;
-        position: fixed;
-        top: 5rem;
-        left: 6.5rem;
         box-shadow: $btn-hover-box-shadow;
         border-radius: 50%;
         z-index: 2000;
@@ -17,6 +14,25 @@
         justify-content: center;
         align-items: center;
         cursor: pointer;
+        position: fixed;
+        @include respond(big-desktop) {
+            top: 5rem;
+            left: 6.5rem;
+        }
+        @include respond(tab-land) {
+            top: 5rem;
+            left: 6.5rem;
+        }
+        @include respond(tab-port) {
+            position: fixed;
+            bottom: 4rem !important;
+            right: 4rem !important;
+        }
+        @include respond(phone) {
+            position: fixed;
+            bottom: 3rem !important;
+            right: 3rem !important;
+        }
     }
 
     &__background {
@@ -24,9 +40,14 @@
         width: 7rem;
         border-radius: 50%;
         position: fixed;
-        top: 5rem;
-        left: 6.5rem;
-
+        @include respond(big-desktop) {
+            top: 5rem;
+            left: 6.5rem;
+        }
+        @include respond(tab-land) {
+            top: 5rem;
+            left: 6.5rem;
+        }
         background-image:
             linear-gradient(to right bottom,
                 $color-primary-light,
@@ -34,7 +55,14 @@
             );
         z-index: 999;
         transition: transform .5s cubic-bezier(0.86, 0, 0.07, 1);
-        // transform: scale(50);
+        @include respond(tab-port) {
+            bottom: 4rem !important;
+            right: 4rem !important;
+        }
+        @include respond(phone) {
+            bottom: 3rem !important;
+            right: 3rem !important;
+        }
     }
 
     &__nav {

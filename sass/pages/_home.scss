@@ -2,6 +2,9 @@
     background-color: $color-grey-light-1;
     padding: 25rem 0;
     margin-top: -15vh;
+    @include respond(tab-port) {
+        padding: 20rem 0;
+    }
 }
 
 .section-features {
@@ -20,12 +23,18 @@
     &>* {
         transform: skewY(-4deg);
     }
+    @include respond(tab-port) {
+        padding: 10rem 0;
+    }
 }
 
 .section-tours {
     background-color: $color-grey-light-1;
     padding: 30rem 0 10rem 0;
     margin-top: -10rem;
+    @include respond(tab-port) {
+        padding: 20rem 0 10rem 0;
+    }
 }
 
 .section-stories {
@@ -39,10 +48,15 @@
         url(../assets/img/hero-img-1.jpg);
     background-size: cover;
     background-position: center;
-
+    @include respond(tab-port) {
+        padding: 10rem 0;
+    }
 }
 
 .section-book {
     padding: 35rem 0;
-    background-image: linear-gradient(to right bottom, $color-white, $color-primary-dark)
+    background-image: linear-gradient(to right bottom, $color-white, $color-primary-dark);
+    @include respond(tab-port) {
+        padding: 10rem 0;
+    }
 }

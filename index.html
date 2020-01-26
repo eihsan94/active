@@ -16,13 +16,10 @@
     <!-- MENU BUTTON -->
     <div class="menu">
         <input type="checkbox" class="menu__checkbox" id="menu-toggle">
-        
         <label for="menu-toggle" class="menu__button">
             <span class="menu__icon">&nbsp;</span>
         </label>
-
         <div class="menu__background">&nbsp;</div>
-
         <nav class="menu__nav">
             <ul class="menu__list">
                 <li class="menu__item"><a href="#" class="menu__link">01 Intro</a></li>
@@ -45,7 +42,7 @@
             </video>
         </div>
         <div class="header__logo-box">
-            <img src="./assets/img/logo.png" alt="logo" class="header__logo">
+            <img src="./assets/img/logo-small.png" alt="logo" class="header__logo">
         </div>
         <div class="header__text-box">
             <h1 class="heading-primary">
@@ -56,7 +53,7 @@
                     is what makes you alive
                 </span>
             </h1>
-            <a href="#" class="btn btn--white btn--animated">Begin your journey</a>
+            <a href="#section-tours" class="btn btn--white btn--animated">Begin your journey</a>
         </div>
     </header>
 
@@ -144,7 +141,7 @@
         </section>
 
         <!-- SECTION TOURS -->
-        <section class="section-tours">
+        <section class="section-tours" id="section-tours">
             <div class="u-center-text u-margin-bottom-big">
                 <h2 class="heading-secondary">
                     Most popular events
@@ -180,7 +177,7 @@
                                     <p class="offer-box__price--value">
                                         $150
                                     </p>
-                                    <a href="#" class="btn btn--white">Book now!</a>
+                                    <a href="#popup" class="btn btn--white">Book now!</a>
                                 </div>
                             </div>
 
@@ -216,7 +213,7 @@
                                     <p class="offer-box__price--value">
                                         $389
                                     </p>
-                                    <a href="#" class="btn btn--white">Book now!</a>
+                                    <a href="#popup" class="btn btn--white">Book now!</a>
                                 </div>
                             </div>
 
@@ -252,7 +249,7 @@
                                     <p class="offer-box__price--value">
                                         $270
                                     </p>
-                                    <a href="#" class="btn btn--white">Book now!</a>
+                                    <a href="#popup" class="btn btn--white">Book now!</a>
                                 </div>
                             </div>
 
@@ -367,7 +364,12 @@
 
     <footer class="footer">
         <div class="footer__logo--box">
-            <img src="./assets/img/logo.png" alt="logo" class="footer__logo--img">
+            <picture class="footer__logo">
+                <source srcset="assets/img/logo-1x.png 1x, assets/img/logo-2x.png 2x"
+                        media="(max-width: 37.5em)">
+                <img srcset="assets/img/logo-1x.png 1x, assets/img/logo-2x.png 2x" alt="Full logo" src="assets/img/logo-2x.png">
+            </picture>
+            <!-- <img src="./assets/img/logo.png" alt="logo" class="footer__logo--img"> -->
         </div>
         <div class="row">
             <div class="col-1-of-2">
@@ -398,6 +400,31 @@
             </div>
         </div>
     </footer>
+
+    <div class="popup" id="popup">
+        <div class="popup__content">
+            <div class="popup__left">
+                <img src="assets/img/act-8.jpg" alt="popup img" class="popup__img popup__img--1">
+                <img src="assets/img/act-9.jpg" alt="popup img" class="popup__img popup__img--2">
+            </div>
+            <div class="popup__right">
+                <a href="#section-tours" class="popup__close">&times;</a>
+                <div class="u-center-text u-margin-bottom-big">
+                    <h2 class="heading-secondary">
+                        Start booking now
+                    </h2>
+                </div>
+                <h3 class="heading-tertiary u-margin-bottom-small">
+                    Important notice - read below before booking
+                </h3>
+                <p class="popup__text">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                </p>
+                <a href="" class="btn btn--primary u-margin-top-medium">Send</a>
+            </div>
+
+        </div>
+    </div>
 </body>
 
 </html>
