@@ -9,8 +9,10 @@
     background-size: cover;
     background-position: top;
     @include tall-card;
+    display: -webkit-box;
     display: flex;
-    justify-content: flex-end;
+    -webkit-box-pack: end;
+            justify-content: flex-end;
 
     @include respond(tab-land) {
         background-image: linear-gradient(105deg,
@@ -22,6 +24,11 @@
     }
 
     @include respond(tab-port) {
+        background-image: -webkit-gradient(linear,
+                left top, right top,
+                from(rgba($color-white, .9)),
+                to(rgba($color-white, .9))),
+            url(../../assets/img/act-7.jpg);
         background-image: linear-gradient(to right,
                 rgba($color-white, .9) 0%,
                 rgba($color-white, .9) 100%),

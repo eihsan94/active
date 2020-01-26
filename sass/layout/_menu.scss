@@ -10,24 +10,31 @@
         box-shadow: $btn-hover-box-shadow;
         border-radius: 50%;
         z-index: 2000;
+        display: -webkit-box;
         display: flex;
-        justify-content: center;
-        align-items: center;
+        -webkit-box-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+                align-items: center;
         cursor: pointer;
         position: fixed;
+
         @include respond(big-desktop) {
             top: 5rem;
             left: 6.5rem;
         }
+
         @include respond(tab-land) {
             top: 5rem;
             left: 6.5rem;
         }
+
         @include respond(tab-port) {
             position: fixed;
             bottom: 4rem !important;
             right: 4rem !important;
         }
+
         @include respond(phone) {
             position: fixed;
             bottom: 3rem !important;
@@ -40,25 +47,31 @@
         width: 7rem;
         border-radius: 50%;
         position: fixed;
+
         @include respond(big-desktop) {
             top: 5rem;
             left: 6.5rem;
         }
+
         @include respond(tab-land) {
             top: 5rem;
             left: 6.5rem;
         }
-        background-image:
-            linear-gradient(to right bottom,
-                $color-primary-light,
-                $color-primary-dark,
-            );
+
+        background-image: -webkit-gradient(linear, left top, right bottom, from($color-primary-light), to($color-primary-dark));
+
+        background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark);
         z-index: 999;
+        -webkit-transition: -webkit-transform .5s cubic-bezier(0.86, 0, 0.07, 1);
+        transition: -webkit-transform .5s cubic-bezier(0.86, 0, 0.07, 1);
         transition: transform .5s cubic-bezier(0.86, 0, 0.07, 1);
+        transition: transform .5s cubic-bezier(0.86, 0, 0.07, 1), -webkit-transform .5s cubic-bezier(0.86, 0, 0.07, 1);
+
         @include respond(tab-port) {
             bottom: 4rem !important;
             right: 4rem !important;
         }
+
         @include respond(phone) {
             bottom: 3rem !important;
             right: 3rem !important;
@@ -74,6 +87,7 @@
         text-align: center;
         opacity: 0;
         width: 0;
+        -webkit-transition: all .5s cubic-bezier(0.86, 0, 0.07, 1);
         transition: all .5s cubic-bezier(0.86, 0, 0.07, 1);
 
     }
@@ -100,6 +114,7 @@
             color: $color-white;
             text-decoration: none;
             background-image: linear-gradient(120deg, transparent 0%, transparent 50%, $color-white 50%);
+            -webkit-transition: all .3s;
             transition: all .3s;
             background-size: 300%;
         }
@@ -108,13 +123,15 @@
         &:hover {
             color: $color-primary;
             background-position: 100%;
-            transform: translateX(1rem);
+            -webkit-transform: translateX(1rem);
+                    transform: translateX(1rem);
         }
     }
 
     // MENU ICON
     &__icon {
         position: relative;
+
         &,
         &::before,
         &::after {
@@ -123,47 +140,60 @@
             background-color: $color-white;
             display: inline-block;
         }
+
         &::before,
         &::after {
             content: "";
             position: absolute;
             left: 0;
+            -webkit-transition: all .2s;
             transition: all .2s;
         }
+
         &::before {
             top: .8rem;
         }
+
         &::after {
             bottom: .8rem;
-        }   
+        }
     }
 
     &__button:hover &__icon::before {
-        transform: translateY(.2rem);
+        -webkit-transform: translateY(.2rem);
+                transform: translateY(.2rem);
     }
+
     &__button:hover &__icon::after {
-        transform: translateY(-.2rem);
+        -webkit-transform: translateY(-.2rem);
+                transform: translateY(-.2rem);
     }
-    
+
     // MENU BUTTON CLICK TRIGGER
-    &__checkbox:checked ~ &__background {
-        transform: scale(50);
+    &__checkbox:checked~&__background {
+        -webkit-transform: scale(50);
+                transform: scale(50);
     }
-    &__checkbox:checked ~ &__nav {
+
+    &__checkbox:checked~&__nav {
         opacity: 1;
         width: 100%;
     }
-    
-    &__checkbox:checked + &__button &__icon {
+
+    &__checkbox:checked+&__button &__icon {
         background-color: transparent;
     }
-    &__checkbox:checked + &__button &__icon::before {
+
+    &__checkbox:checked+&__button &__icon::before {
         top: 0;
-        transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+                transform: rotate(45deg);
     }
-    &__checkbox:checked + &__button &__icon::after {
+
+    &__checkbox:checked+&__button &__icon::after {
         top: 0;
-        transform: rotate(-45deg);
+        -webkit-transform: rotate(-45deg);
+                transform: rotate(-45deg);
     }
 
 }

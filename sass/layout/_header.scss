@@ -1,13 +1,8 @@
 .header {
     position: relative;
     height: 95vh;
-    background-image:
-        linear-gradient(to right bottom,
-            rgba($color-primary, 0.8),
-            rgba($color-secondary, 0.8),
-        );
-    //  ),
-    //  url(../assets/img/hero-img-1.jpg);
+    background-image: -webkit-gradient(linear, left top, right bottom, from(rgba($color-primary, 0.8)), to(rgba($color-secondary, 0.8)));
+    background-image: linear-gradient(to right bottom, rgba($color-primary, 0.8), rgba($color-secondary, 0.8));
     background-size: cover;
     background-position: center;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80vh);
@@ -35,6 +30,7 @@
         position: absolute;
         top: 40%;
         left: 50%;
+        -webkit-transform: translate(-50%, -50%);
         transform: translate(-50%, -50%);
         /* making sure to align to the center of the box element */
         text-align: center;

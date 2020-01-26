@@ -1,5 +1,6 @@
 .offer-box {
-    perspective: 150rem;
+    -webkit-perspective: 150rem;
+            perspective: 150rem;
     -moz-perspective: 150rem;
     position: relative;
     height: 50rem;
@@ -7,12 +8,14 @@
     &__side {
         height: 50rem;
         @include tall-card;
+        -webkit-transition: all .8s ease;
         transition: all .8s ease;
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
-        backface-visibility: hidden;
+        -webkit-backface-visibility: hidden;
+                backface-visibility: hidden;
         overflow: hidden;
 
         &--front {
@@ -20,40 +23,34 @@
         }
 
         &--back {
-            transform: rotateY(180deg);
+            -webkit-transform: rotateY(180deg);
+                    transform: rotateY(180deg);
 
             &--1 {
-                background-image:
-                    linear-gradient(to right bottom,
-                        $color-primary-light,
-                        $color-primary-dark,
-                    );
+                background-image: -webkit-gradient(linear, left top, right bottom, from($color-primary-light), to($color-primary-dark));
+                background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark);
             }
 
             &--2 {
-                background-image:
-                    linear-gradient(to right bottom,
-                        $color-secondary-light,
-                        $color-secondary-dark,
-                    );
+                background-image: -webkit-gradient(linear, left top, right bottom, from($color-secondary-light), to($color-secondary-dark));
+                background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark);
             }
 
             &--3 {
-                background-image:
-                    linear-gradient(to right bottom,
-                        $color-tertiary-light,
-                        $color-tertiary-dark,
-                    );
+                background-image: -webkit-gradient(linear, left top, right bottom, from($color-tertiary-light), to($color-tertiary-dark));
+                background-image: linear-gradient(to right bottom, $color-tertiary-light, $color-tertiary-dark);
             }
         }
     }
 
     &:hover &__side--front {
-        transform: rotateY(-180deg);
+        -webkit-transform: rotateY(-180deg);
+                transform: rotateY(-180deg);
     }
 
     &:hover &__side--back {
-        transform: rotateY(0deg);
+        -webkit-transform: rotateY(0deg);
+                transform: rotateY(0deg);
     }
 
     // FRONT SIDE STYLES
@@ -67,24 +64,18 @@
         -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
 
         &--1 {
-            background-image: linear-gradient(to right bottom,
-                    $color-primary-light,
-                    $color-primary-dark),
-                url(../../assets/img/act-4.jpg),
+            background-image: -webkit-gradient(linear,left top, right bottom,from($color-primary-light),to($color-primary-dark)),url(../../assets/img/act-4.jpg),;
+            background-image: linear-gradient(to right bottom,$color-primary-light,$color-primary-dark),url(../../assets/img/act-4.jpg),
         }
 
         &--2 {
-            background-image: linear-gradient(to right bottom,
-                    $color-secondary-light,
-                    $color-secondary-dark),
-                url(../../assets/img/act-5.jpg),
+            background-image: -webkit-gradient(linear, left top, right bottom, from($color-secondary-light), to($color-secondary-dark)), url(../../assets/img/act-5.jpg),;
+            background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark), url(../../assets/img/act-5.jpg),
         }
 
         &--3 {
-            background-image: linear-gradient(to right bottom,
-                    $color-tertiary-light,
-                    $color-tertiary-dark),
-                url(../../assets/img/act-6.jpg),
+            background-image: -webkit-gradient(linear, left top, right bottom, from($color-tertiary-light), to($color-tertiary-dark)), url(../../assets/img/act-6.jpg),;
+            background-image: linear-gradient(to right bottom, $color-tertiary-light, $color-tertiary-dark), url(../../assets/img/act-6.jpg),
         }
     }
 
@@ -105,24 +96,18 @@
             -webkit-box-decoration-break: clone;
 
             &--1 {
-                background-image: linear-gradient(to right bottom,
-                        rgba($color-primary-light, 0.8),
-                        rgba($color-primary-dark, 0.8),
-                    );
+                background-image: -webkit-gradient(linear, left top, right bottom, from(rgba($color-primary-light, 0.8)), to(rgba($color-primary-dark, 0.8)));
+                background-image: linear-gradient(to right bottom, rgba($color-primary-light, 0.8), rgba($color-primary-dark, 0.8));
             }
 
             &--2 {
-                background-image: linear-gradient(to right bottom,
-                        rgba($color-secondary-light, 0.8),
-                        rgba($color-secondary-dark, 0.8),
-                    );
+                background-image: -webkit-gradient(linear, left top, right bottom, from(rgba($color-secondary-light, 0.8)), to(rgba($color-secondary-dark, 0.8)) );
+                background-image: linear-gradient(to right bottom, rgba($color-secondary-light, 0.8), rgba($color-secondary-dark, 0.8) );
             }
 
             &--3 {
-                background-image: linear-gradient(to right bottom,
-                        rgba($color-tertiary-light, 0.8),
-                        rgba($color-tertiary-dark, 0.8),
-                    );
+                background-image: -webkit-gradient(linear, left top, right bottom, from(rgba($color-tertiary-light, 0.8)), to(rgba($color-tertiary-dark, 0.8)));
+                background-image: linear-gradient(to right bottom, rgba($color-tertiary-light, 0.8), rgba($color-tertiary-dark, 0.8));
             }
         }
     }
@@ -153,7 +138,8 @@
     &__cta {
         position: absolute;
         left: 50%;
-        transform: translate(-50%, 50%);
+        -webkit-transform: translate(-50%, 50%);
+                transform: translate(-50%, 50%);
     }
 
     &__price {

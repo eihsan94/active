@@ -41,6 +41,7 @@
     }
     &__list {
         list-style: none;
+        display: -webkit-box;
         display: flex;
     }
     &__item {
@@ -56,13 +57,15 @@
             text-decoration: none;
             display: inline-block;
             text-transform: uppercase;
+            -webkit-transition: all .3s;
             transition: all .3s;
         }
 
         &:hover,
         &:active {
             color: $color-primary;
-            transform: scale(1.1);
+            -webkit-transform: scale(1.1);
+                    transform: scale(1.1);
         }
 
     }

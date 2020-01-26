@@ -7,6 +7,7 @@
         padding: 1rem 20px;
         display: inline-block;
         border-radius: 100px;
+        -webkit-transition: all 0.2s;
         transition: all 0.2s; /* for smooth floating button effects*/
         position: relative;
 
@@ -15,15 +16,18 @@
         cursor: pointer;
     }
     &:hover {
-        transform: translateY(-3px);
+        -webkit-transform: translateY(-3px);
+                transform: translateY(-3px);
         box-shadow: $btn-hover-box-shadow;
         &::after { // & = .btn:hover::after
-            transform: scaleX(1.4) scaleY(1.6);
+            -webkit-transform: scaleX(1.4) scaleY(1.6);
+                    transform: scaleX(1.4) scaleY(1.6);
             opacity: 0;
         }
     }
     &:active {
-        transform: translateY(-1px);
+        -webkit-transform: translateY(-1px);
+                transform: translateY(-1px);
         box-shadow: $btn-active-box-shadow;
     }
     &--white {
@@ -50,6 +54,7 @@
         top: 0;
         left: 0;
         z-index: -1;
+        -webkit-transition: all .2s;
         transition: all .2s;
     }
     &--animated {
@@ -59,8 +64,10 @@
         animation-duration: 1s;
         animation-timing-function: ease-out; 
         */
-        animation: moveInBottom 1s ease-out .75s;
-        animation-fill-mode: backwards; /* it will apply the 0% keyframe before the animations start useful for delayed animations */
+        -webkit-animation: moveInBottom 1s ease-out .75s;
+                animation: moveInBottom 1s ease-out .75s;
+        -webkit-animation-fill-mode: backwards;
+                animation-fill-mode: backwards; /* it will apply the 0% keyframe before the animations start useful for delayed animations */
     }
 }
 
@@ -73,6 +80,7 @@
         text-decoration: none;
         border-bottom: 1px solid $color-primary;
         padding: 3px;
+        -webkit-transition: all .2s;
         transition: all .2s;
     }
 

@@ -20,6 +20,7 @@
     class$="col-" -> selecting class that has suffix col-
     class*="col-" -> selecting class that has contain col-
     */
+    
     [class^="col-"]  { 
         float: left;
 

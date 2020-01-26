@@ -13,6 +13,7 @@
         border-bottom: 3px solid transparent;
         width: 90%;
         display: block;
+        -webkit-transition: all .3s;
         transition: all .3s;
 
         @include respond(tab-port) {
@@ -32,18 +33,21 @@
     }
 
     &__label {
-        transform: translateY(-400%);
+        -webkit-transform: translateY(-400%);
+                transform: translateY(-400%);
         font-size: 1.2rem;
         font-weight: 700;
         margin-left: 2rem;
         margin-top: .7rem;
         display: block;
+        -webkit-transition: all .3s;
         transition: all .3s;
     }
     &__input:placeholder-shown + &__label  { // + => select the next sibling class
         opacity: 0; // just making the element transparent. Can be animated
         visibility: hidden; // completely remove the element from the page Cannot be animated
-        transform: translateY(-200%);
+        -webkit-transform: translateY(-200%);
+                transform: translateY(-200%);
     }
 
     &__radio {
@@ -78,9 +82,11 @@
                 position: absolute;
                 top: 50%;
                 left: 50%;
-                transform: translate(-50%, -50%);
+                -webkit-transform: translate(-50%, -50%);
+                        transform: translate(-50%, -50%);
                 background-color: $color-primary;
                 opacity: 0;
+                -webkit-transition: opacity .2s;
                 transition: opacity .2s;
             }
         }
