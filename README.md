@@ -16,7 +16,7 @@
 ---
 
 ## What is this?
-Angular 8 で作られた自分についての自己紹介のウェブアプリです。 (This small Angular8 application is a self intro web app of me.)
+SCSS と　HTML で作られた活発的なライフスタイルのホームページです。 (This is an active lifestyle website that is made from scss and html.)
 
 ## Live Demo
 
